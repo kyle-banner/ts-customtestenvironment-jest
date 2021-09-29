@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "test-proj",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -14,5 +14,9 @@
   },
   "dependencies": {
     "@types/jest": "^27.0.2"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./serverConfig": "./src/config/index.ts"
   }
 }

@@ -1,5 +1,7 @@
 describe('Test', () => {
   it("testing...", async () => {
-    expect(true).toEqual(true);
+    expect(global.someGlobalObject).toEqual({
+      key: "hello"
+    });
   });
 });

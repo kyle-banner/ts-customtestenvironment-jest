@@ -1,5 +1,6 @@
 const NodeEnvironment = require('jest-environment-node');
-import config from 'src/config';
+// @ts-ignore
+import serverConfig from 'test-proj/serverConfig';
 
 class CustomEnvironment extends NodeEnvironment {
   constructor(config, context) {
@@ -8,7 +9,7 @@ class CustomEnvironment extends NodeEnvironment {
 
   async setup() {
     await super.setup();
-    this.global.someGlobalObject = { key: config };
+    this.global.someGlobalObject = serverConfig;
   }
 
   async teardown() {
